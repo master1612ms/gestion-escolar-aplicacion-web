@@ -1,0 +1,234 @@
+/* src\app\screens\alumnos-screen\alumnos-screen.scss */
+// Compensa el sidebar en desktop
+.main-content-alumnos {
+  margin-left: 220px;
+  transition: margin-left 0.3s;
+}
+
+@media (max-width: 991px) {
+  .main-content-alumnos {
+    margin-left: 0;
+  }
+}
+
+.wrapper {
+  height: auto;
+}
+
+/* Encabezados usados en su HTML */
+.header-home,
+.header-home-alumnos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+/* Cuerpos usados en su HTML */
+.body-alumnos,
+.body-admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* =========================
+   Contenedores y tabla
+   ========================= */
+.container {
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  min-height: 1px;
+  margin: 0 auto;
+  background: var(--table-bg, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
+}
+
+/* =========================
+   Alineación del texto dentro del alert
+   ========================= */
+.alert .title-table {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.alert-warning {
+  font-family: Nexa;
+  font-size: 16px;
+  color: var(--text-main, #231F20);
+  text-align: center;
+  background: var(--table-bg, #FFF3CD);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.alert-primary {
+  background-color: var(--table-bg, #e7f3ff);
+  border-color: var(--table-header-border, #b3d9ff);
+  color: var(--text-main, #004085);
+}
+
+.title-table {
+  margin-left: 3rem;
+  font-size: 28px;
+  text-align: left;
+  font-family: Nexa-Bold;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  opacity: 1;
+  color: var(--text-main, #231F20);
+}
+
+/* Scroll horizontal SOLO para la tabla */
+
+// Scroll horizontal para tabla y paginador juntos
+.table-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  min-height: 1px;
+  margin: 0 auto;
+  background: var(--table-bg, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+}
+
+::ng-deep .mat-mdc-paginator-container {
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+::ng-deep .mat-mdc-paginator-range-label {
+  margin: 0;
+  font-family: Nexa-Bold;
+}
+
+::ng-deep .mat-mdc-paginator-page-size {
+  align-items: center;
+}
+
+// Estilos de la tabla
+table {
+  min-width: 1200px;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+::ng-deep .mat-mdc-table {
+  table-layout: fixed !important;
+}
+
+// Use palette variables for table text and header
+.mat-mdc-header-cell {
+  border-bottom-color: var(--table-header-border, #231F20);
+  font-family: Nexa-Bold !important;
+  font-size: 18px;
+  text-align: left;
+  letter-spacing: 0px;
+  opacity: 1;
+  color: var(--text-main, #fff) !important;
+}
+
+.mat-mdc-cell {
+  text-align: left;
+  font-family: Nexa !important;
+  font-size: 15px !important;
+  letter-spacing: 0px !important;
+  color: var(--text-main, #fff) !important;
+  opacity: 1 !important;
+}
+
+/* Encabezado de columnas de acción centrado */
+::ng-deep .th-accion {
+  text-align: center !important;
+}
+
+/* Acciones */
+.td-editar {
+  color: #0092B8 !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+  text-align: center;
+}
+
+.td-editar:hover {
+  color: #006179 !important;
+  font-size: 25px !important;
+  text-align: center;
+}
+
+.td-eliminar {
+  color: #E84150 !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+  text-align: center;
+}
+
+.td-eliminar:hover {
+  color: #ce1626 !important;
+  font-size: 25px !important;
+  text-align: center;
+}
+
+/* =========================
+   Títulos (saludo/rol y card)
+   Tipografía fluida + control de quiebres
+   ========================= */
+.title-perfil,
+.title-table {
+  display: block;
+  line-height: 1.1;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  opacity: 1;
+  font-family: Nexa-Bold;
+}
+
+/* Saludo: "Bienvenido {user}" (base desktop/tablet) */
+.title-perfil {
+  margin-left: 3rem;
+  font-size: clamp(1.375rem, 1.1rem + 1.2vw, 2.25rem);
+  text-align: left;
+  color: var(--text-main, #231F20);
+}
+
+/* Título de la card (alerta) */
+.title-table {
+  margin-left: 3rem;
+  font-size: clamp(1.125rem, 0.95rem + 0.9vw, 1.875rem);
+  text-align: center;
+  color: var(--text-main, #231F20);
+}
+
+/* =========================
+   Hotfix para el rango crítico 635–660 px
+   ========================= */
+@media (min-width: 635px) and (max-width: 660px) {
+  .title-perfil {
+    font-size: clamp(1.25rem, 0.9rem + 1vw, 1.9rem);
+    letter-spacing: -0.01em;
+  }
+
+  .title-table {
+    font-size: clamp(1.05rem, 0.85rem + 0.7vw, 1.6rem);
+  }
+}/* src\app\screens\alumnos-screen\alumnos-screen.scss */

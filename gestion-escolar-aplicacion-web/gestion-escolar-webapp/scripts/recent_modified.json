@@ -1,0 +1,20 @@
+﻿{
+    "groups":  {
+                   "Directory":  "C:\\Users\\emili\\Videos\\Proyecto-aplicaciones web\\back\\gestion-escolar-webapp\\scripts",
+                   "Count":  3
+               },
+    "top":  [
+                {
+                    "FullName":  "C:\\Users\\emili\\Videos\\Proyecto-aplicaciones web\\back\\gestion-escolar-webapp\\scripts\\collect_recent.ps1",
+                    "LastWriteTime":  "\/Date(1779401820539)\/"
+                },
+                {
+                    "FullName":  "C:\\Users\\emili\\Videos\\Proyecto-aplicaciones web\\back\\gestion-escolar-webapp\\scripts\\modified_2026-05-20.json",
+                    "LastWriteTime":  "\/Date(1779401641064)\/"
+                },
+                {
+                    "FullName":  "C:\\Users\\emili\\Videos\\Proyecto-aplicaciones web\\back\\gestion-escolar-webapp\\scripts\\collect_modified_2026_05_20.ps1",
+                    "LastWriteTime":  "\/Date(1779401637388)\/"
+                }
+            ]
+}
